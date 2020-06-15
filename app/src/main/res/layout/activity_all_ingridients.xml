@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Meals.AllIngridients">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:id="@+id/tv.cat.title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:text="Shopping list"/>
+
+            <CheckBox
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:id="@+id/checkbox.main"
+                android:text="All"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/colorYellow"
+                android:buttonTint="@color/colorPrimary"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGray"
+            android:inputType="text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:text="Below is a list of all available ingredients. Please begin by setting the food title"/>
+
+        <EditText
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorBlack"
+            android:hint="Food/recipe title"
+            android:id="@+id/edt.food.title"
+            android:background="@drawable/title_background"
+            android:textColorHint="@color/colorGray"/>
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            style="?android:attr/progressBarStyle"
+            android:id="@+id/progressBar"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler.main"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_button_clicked_agree"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="save"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+            android:id="@+id/btn.save"/>
+    </LinearLayout>
+
+</LinearLayout>

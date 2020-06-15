@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Food Recipes"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="34sp" />
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/icon_fev_main"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:id="@+id/btn.fevs"/>
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/icon_shopping_cart"
+                        android:layout_gravity="center"
+                        android:id="@+id/btn.cart"/>
+
+                </LinearLayout>
+                <com.google.android.gms.ads.AdView
+                    android:layout_marginTop="8dp"
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adview"
+                    android:layout_gravity="bottom|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="BANNER"
+                    android:layout_alignParentEnd="true"
+                    ads:adUnitId="@string/banner"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/shape_button_clicked_agree"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:text="areas"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                            android:id="@+id/btn.areas"/>
+                        <Button
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/shape_button_clicked"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:text="add recipe"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                            android:id="@+id/btn.add.recipe"/>
+                        <Button
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/shape_button_clicked_agree"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:text="random meals"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                            android:id="@+id/btn.random.meals"/>
+                        <Button
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/shape_button_clicked"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:text="ingredients"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                            android:id="@+id/btn.ingredients"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentTop="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pager"
+                    app:layout_constraintEnd_toEndOf="@+id/pager"
+                    app:layout_constraintStart_toStartOf="@+id/pager" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ProgressBar
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                style="?android:attr/progressBarStyle"
+                android:id="@+id/progressBar"
+                android:visibility="gone"/>
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meal Categories"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginRight="16dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="16dp"
+                android:id="@+id/recycler.cats"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.veen.myrecipe">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/cookicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Meals.AllIngridients"
+            android:theme="@style/AppThemeList"
+            android:label=""></activity>
+        <activity android:name=".Meals.Favorites" />
+        <activity android:name=".Meals.MealsByArea" />
+        <activity android:name=".Meals.Areas" />
+        <activity
+            android:name=".Meals.MealDesc"
+            android:theme="@style/AppThemeAgreement" />
+        <activity android:name=".Meals.MealsFromCats" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppThemeAgreement">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/appid" />
+    </application>
+
+</manifest>

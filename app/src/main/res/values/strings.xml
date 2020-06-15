@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lets Cook</string>
+
+    <string name="appid">ca-app-pub-6958308278075823~2477492248</string>
+    <string name="banner">ca-app-pub-6958308278075823/7538247238</string>
+    <string name="interstitial">ca-app-pub-6958308278075823/4469424285</string>
+
+    <!--<string name="appid">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial">ca-app-pub-3940256099942544/1033173712</string>-->
+</resources>

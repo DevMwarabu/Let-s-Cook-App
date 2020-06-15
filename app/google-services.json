@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "861862714584",
+    "firebase_url": "https://my-recipe-cc85c.firebaseio.com",
+    "project_id": "my-recipe-cc85c",
+    "storage_bucket": "my-recipe-cc85c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861862714584:android:50353a28a8ed0ff4650bad",
+        "android_client_info": {
+          "package_name": "com.veen.myrecipe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861862714584-1nc7416df0i2i2mq9kpuc19dghh14tso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBifPkB8IZz8a74b9-SzgLxCXAY6LHywlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861862714584-1nc7416df0i2i2mq9kpuc19dghh14tso.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
